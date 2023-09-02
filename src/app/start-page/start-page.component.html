@@ -1,0 +1,12 @@
+<div class="start-page-container">
+  <div class="logo-text-container">
+    <div class="logo-container" [@logoAnimation]="logoState">
+      <img src="../../assets/img/logo.png" alt="DA Logo" class="logo">
+    </div>
+    <div class="text-visible-area"> <!-- Zusätzliche Schicht -->
+      <div class="text-container" [@textAnimation]="textState" [style.visibility]="textState === 'hidden' ? 'hidden' : 'visible'">
+        <p class="dabubble-text">DABubble</p>
+      </div>
+    </div>
+  </div>
+</div>

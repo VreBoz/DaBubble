@@ -1,0 +1,45 @@
+.start-page-container {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to top, #444df2, #535af1, #797ef3);
+    display: flex;
+    justify-content: center;
+    /* Weitere CSS für die Animation des Farbverlaufs ... */
+  }
+
+  .logo-text-container {
+    overflow: visible;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-container {
+    margin-right: 20px;
+    flex-shrink: 0;
+    z-index: 2;
+    
+    .logo {
+      width: 180px;
+      height: 180px;
+    }
+  }
+  .text-visible-area {  // Neuer Container
+    overflow: hidden;
+    flex-grow: 1;
+  }
+  
+  .text-container {
+    /* CSS für den DABubble-Text */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 180px;
+    .dabubble-text {
+      
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 70px;
+      color: #FFFFFF;
+      /* Weitere CSS-Stile */
+    }
+  }
