@@ -1,0 +1,30 @@
+
+.header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #eceefe;
+}
+
+.logo-text-container-header {
+    display: flex;
+    align-items:center;
+    margin-top: 75px;
+    margin-left: 75px;
+    .logo-container {
+        margin-right: 16px;
+        img {
+            width: 70px;
+            height: 70px;
+        }
+    }
+    .text-container {
+        .dabubble-text {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: #000000;
+        }
+    }
+}

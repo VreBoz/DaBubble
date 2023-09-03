@@ -15,6 +15,9 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { StepOneComponent } from './register/step-one/step-one.component';
 import { StepTwoComponent } from './register/step-two/step-two.component';
+import { HeaderComponent } from './header/header.component';
+import {MatCardModule} from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { StepTwoComponent } from './register/step-two/step-two.component';
     LoginComponent,
     RegisterComponent,
     StepOneComponent,
-    StepTwoComponent
+    StepTwoComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,8 @@ import { StepTwoComponent } from './register/step-two/step-two.component';
     provideAnalytics(() => getAnalytics()),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
-    provideFirestore(() => getFirestore())
+    provideFirestore(() => getFirestore()),
+    MatCardModule
   ],
   providers: [
     ScreenTrackingService,UserTrackingService
