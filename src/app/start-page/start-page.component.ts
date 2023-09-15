@@ -24,8 +24,8 @@ import { Router } from '@angular/router';
       transition('* => *', [animate('0.5s')]),
     ]),
     trigger('containerAnimation', [
-      state('normal', style({ transform: 'none' })),
-      state('topLeft', style({ transform: 'translate(-50%, -50%)' })),
+      state('normal', style({ top: '50%', left: '50%', transform: 'translate(-50%, -50%) scale(1)' })),
+      state('topLeft', style({ top: '0%', left: '0%', transform: 'translate(0%, 0%) scale(0.5)' })),
       transition('normal => topLeft', [animate('1s')])
     ])
   ]
@@ -53,6 +53,7 @@ export class StartPageComponent {
   }
 
   navigateToLogin() {
+    debugger;
     this.containerState = 'topLeft';
     setTimeout(() => {
       this.router.navigate(['/login']);  // Navigiert zur Login-Seite

@@ -17,6 +17,15 @@ import { StepOneComponent } from './register/step-one/step-one.component';
 import { StepTwoComponent } from './register/step-two/step-two.component';
 import { HeaderComponent } from './header/header.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+
+
+
+
 
 
 @NgModule({
@@ -38,7 +47,14 @@ import {MatCardModule} from '@angular/material/card';
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatIconModule
+    
   ],
   providers: [
     ScreenTrackingService,UserTrackingService

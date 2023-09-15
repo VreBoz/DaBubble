@@ -3,12 +3,247 @@
     height: 100vh;
     background-color: #eceefe;
     display: flex;
+    flex-direction: column;
     justify-content: center;  // Zentriert horizontal
     align-items: center;  // Zentriert vertikal
 
     .login-card {
-        width: 500px;
-        height: 700px;
+        width: 600px;
+        height: 760px;
         border-radius: 30px;
+        z-index: 1;
+        padding: 48px;
+        .center {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          h1 {
+            font-size: 46px;
+            margin-bottom: 38px;
+            color: #444DF2;
+          }
+          p {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 38px;
+          }
+          .input {
+            background-color: #eceefe;
+            height: 60px;
+            border-radius: 100px;
+            border: 1px solid transparent;
+            width: 100%;
+            margin-bottom: 38px;
+            padding-left: 60px;  /* Platz für das Icon lassen */
+            color: #686868;  /* Textfarbe ändern */
+            &:hover {
+              border-color: #686868;
+            }
+            &.email {
+              background-image: url('../../assets/img/mail.png');
+              background-repeat: no-repeat;
+              background-position: 20px center;  /* Position des Icons anpassen */
+            }
+            &.password {
+              background-image: url('../../assets/img/lock.png');
+              background-repeat: no-repeat;
+              background-position: 20px center;  /* Position des Icons anpassen */
+            }
+          }
+          a {
+            margin-bottom: 38px;
+            font-size: 18px;
+            color: #797EF3;
+            text-decoration: none; 
+            border: 1px solid transparent;
+            padding: 5px 15px;
+            transition: 75ms ease-in-out;
+            &:hover {
+              border: 1px solid transparent;
+              background-color: #ececec;
+              font-weight: 500;
+              color: #444DF2;
+              border-radius: 25px;
+            }
+          }
+          .other-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 38px;
+            width: 100%;
+            justify-content: space-between;
+
+            .gray-line {
+              width: 185px;
+              height: 1px;
+              background-color: #ADB0D9;
+            }
+            p {
+              margin: 0;
+            }
+          }
+          .login-google {
+            height: 60px;
+            width: 100%;
+            background-color: #eceefe;
+            border-radius: 100px;
+            border: 1px solid transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: 125ms ease-in-out;
+            margin-bottom: 38px;
+            
+            &:hover {
+              border-color: #444DF2;
+              font-weight: 700;
+            }
+
+            img {
+              
+            }
+
+            span {
+              font-size: 18px;
+              color: #444DF2;
+              margin-left: 10px;
+            }
+          }
+          .login-buttons {
+            display: flex;
+            justify-content: center;
+            
+
+            .log-in {
+              padding: 12px 25px 12px 25px;
+              margin-right: 15px;
+              border-radius: 25px;
+              background-color: #444DF2;
+              font-size: 18px;
+              font-weight: 700;
+              color: #FFFFFF;
+              border: 1px solid #444DF2;
+              transition: 125ms ease-in-out;
+              cursor: pointer;
+              &:hover {
+                background-color: #797ef3;
+                border-color: #797ef3;
+              }
+            } 
+            .guest-log-in {
+              padding: 12px 25px 12px 25px;
+              margin-left: 15px;
+              border-radius: 25px;
+              background-color: transparent;
+              font-size: 18px;
+              font-weight: 700;
+              color: #444DF2;
+              border: 1px solid #444DF2;
+              transition: 125ms ease-in-out;
+              cursor: pointer;
+              &:hover {
+                background-color: #444DF2;
+                color: #FFFFFF;
+              }
+            } 
+          }
+        }
     }
 }
+
+.start-page-container {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to top, #444df2, #535af1, #797ef3);
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    /* Weitere CSS für die Animation des Farbverlaufs ... */
+  }
+
+  .logo-text-container {
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;  /* Startposition */
+    left: 50%; /* Startposition */
+    transform: translate(-50%, -50%); /* Zentrierung */
+    z-index: 2;
+    
+  }
+  
+  .logo-container {
+    margin-right: 20px;
+    flex-shrink: 0;
+    z-index: 2;
+    
+    .logo {
+      width: 180px;
+      height: 180px;
+    }
+  }
+  .text-visible-area {  // Neuer Container
+    overflow: hidden;
+    flex-grow: 1;
+  }
+  
+  .text-container {
+    /* CSS für den DABubble-Text */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 180px;
+    .dabubble-text {
+      
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 70px;
+      color: #FFFFFF;
+      /* Weitere CSS-Stile */
+    }
+  }
+
+  .new-account {
+    position: absolute;
+    top: 71px;
+    right: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    span {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      color: #797EF3;
+      border: 0.5px solid transparent;
+      padding: 15px 25px;
+      border-radius: 25px;
+      &:hover {
+        border-color: #444DF2;
+        color: #444DF2;
+      }
+    }
+  }
+
+  .secure {
+    position: absolute;
+    bottom: 75px;
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      color: #797EF3;
+      border: 0.5px solid transparent;
+      padding: 15px 45px;
+      border-radius: 25px;
+      &:hover {
+        border-color: #444DF2;
+        color: #444DF2;
+      }
+    }
+  }
